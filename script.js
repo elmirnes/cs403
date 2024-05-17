@@ -95,16 +95,24 @@
 //}
 
 //6. Write a program that calculates a discount based on the purchase amount.
+//let amount=parseInt(prompt("How many did you buy?"))
+//if (amount>=10) {
+//    console.log("you have 30% discount");
+//}else if (amount>=5) {
+//    console.log("you have 20% discount");
+//}else if (amount>0){
+//    console.log("you have 10% discount");
+//}else{
+//    console.log("you dont enter any number");
+//}
 
-let amount=parseInt(prompt("How many did you buy?"))
-if (amount>=10) {
-    console.log("you have 30% discount");
-}else if (amount>=5) {
-    console.log("you have 20% discount");
-}else if (amount>0){
-    console.log("you have 10% discount");
-}else{
-    console.log("you dont enter any number");
-}
 //7. Write a simple number guessing game.
+//et correct=34
+//et number=parseInt(prompt("add  number between 1 to 100"))
+//f(correct==number){
+//   console.log("winner winner chicken dinner");
+//else{
+    
+//   console.log("refresh the site to try again ");
+
 
