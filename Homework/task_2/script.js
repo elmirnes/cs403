@@ -52,21 +52,31 @@
 //}
 
 //3. Write a program to determine the greater of two numbers.
-//let num=parseInt(prompt("add first number"))
-//let num1=parseInt(prompt("add second number"))
-//if (num%1==0 || num1%1==0){
-//    if (num>num1){
-//    console.log(num,"is bigger than",num1);
-//}else if (num1>num){
-//    console.log(num1,"is bigger than",num);
-//    
-//}else if (num==num1){
-//    console.log(num,"equal",num1);
-//}else{
-//    console.log("add normal number");
-//}
-//}
+let num=parseInt(prompt("add first number"))
+let num1=parseInt(prompt("add second number"))
+if (num%1==0 || num1%1==0){
+    if (num>num1){
+    console.log(num,"is bigger than",num1);
+}else if (num1>num){
+    console.log(num1,"is bigger than",num);
+    
+}else if (num==num1){
+    console.log(num,"equal",num1);
+}else{
+    console.log("add normal number");
+}
+}
 
+//function greater(num1,num2) {
+//    if (typeof num1=="number"|| num2=="number")
+//    if (num1>num2){
+//        console.log(num1,"bigger than",num2);
+//    }else if(num2>num1){
+//        console.log(num2,"bigger than",num1);
+//    }
+//    
+//}
+//greater(23,34)
 //4. Write a program that assigns a letter grade based on a numerical grade.
 
 //let num=parseInt(prompt("add your point"))
@@ -107,10 +117,11 @@
 //    console.log("you dont enter any number");
 //}
 //7. Write a simple number guessing game.
-//et correct=34
-//et number=parseInt(prompt("add  number between 1 to 100"))
-//f(correct==number){
+//let correct=34
+//let number=parseInt(prompt("add  number between 1 to 100"))
+//if(correct==number){
 //   console.log("winner winner chicken dinner");
 //else{
     
 //   console.log("refresh the site to try again ");
+
