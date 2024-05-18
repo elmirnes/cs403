@@ -52,20 +52,25 @@
 //}
 
 //3. Write a program to determine the greater of two numbers.
-let num=parseInt(prompt("add first number"))
-let num1=parseInt(prompt("add second number"))
-if (num%1==0 || num1%1==0){
-    if (num>num1){
-    console.log(num,"is bigger than",num1);
-}else if (num1>num){
-    console.log(num1,"is bigger than",num);
-    
-}else if (num==num1){
-    console.log(num,"equal",num1);
-}else{
-    console.log("add normal number");
-}
-}
+
+//___firstSolution___\\
+
+//let num=parseInt(prompt("add first number"))
+//let num1=parseInt(prompt("add second number"))
+//if (num%1==0 || num1%1==0){
+//    if (num>num1){
+//    console.log(num,"is bigger than",num1);
+//}else if (num1>num){
+//    console.log(num1,"is bigger than",num);
+//    
+//}else if (num==num1){
+//    console.log(num,"equal",num1);
+//}else{
+//    console.log("add normal number");
+//}
+//}
+
+//___secondSolution___\\
 
 //function greater(num1,num2) {
 //    if (typeof num1=="number"|| num2=="number")
@@ -78,6 +83,8 @@ if (num%1==0 || num1%1==0){
 //}
 //greater(23,34)
 //4. Write a program that assigns a letter grade based on a numerical grade.
+
+//___firstSolution___\\
 
 //let num=parseInt(prompt("add your point"))
 //if (num > 90) {
@@ -92,7 +99,26 @@ if (num%1==0 || num1%1==0){
 //    console.log("you failed");
 //}
 
+//___secondSolution___\\
+
+//function Mark(point) {
+//    if (point > 90) {
+//        console.log("letterGrade = 'A'");
+//    }else if (point > 80) {
+//        console.log("letterGrade = 'B'");
+//    }else if (point > 70) {
+//        console.log("letterGrade = 'C'");
+//    }else if (point > 60) {
+//        console.log("letterGrade = 'D'");
+//    }else {
+//        console.log("you failed");
+//    }
+//}
+
 //5. Write a program that calculates the ticket price based on age.
+
+//___firsSolution___\\
+
 //let age=parseInt(prompt("add your age for ticket price"))
 //if (age>=18){
 //    console.log("you should pay 20$ for ticket");
@@ -104,19 +130,53 @@ if (num%1==0 || num1%1==0){
 //    console.log("you must enter a valid age");
 //}
 
+//___secondSolution___\\
+
+//function price(age) {
+//    if (age>=18){
+//            console.log("you should pay 20$ for ticket");
+//    }else if( age>=7 ){
+//        console.log("you should pay 14$ for ticket");
+//    }else if (age<7){
+//        console.log("you can enter for free");
+//    }else{
+//        console.log("you must enter a valid age");
+//    }
+//}
+
 //6. Write a program that calculates a discount based on the purchase amount.
 
-//let amount=parseInt(prompt("How many did you buy?"))
-//if (amount>=10) {
-//    console.log("you have 30% discount");
-//}else if (amount>=5) {
-//    console.log("you have 20% discount");
-//}else if (amount>0){
-//    console.log("you have 10% discount");
-//}else{
-//    console.log("you dont enter any number");
-//}
+//____firstSolution___\\
+
+//et amount=parseInt(prompt("How many did you buy?"))
+//f (amount>=10) {
+//   console.log("you have 30% discount");
+//   
+//else if (amount>=5) {
+//   console.log("you have 20% discount");
+//else if (amount>0){
+//   console.log("you have 10% discount");
+//else{
+//   console.log("you dont enter any number");
+//
+
+
+//___secondSolution___\\
+
+//unction discountPercent(count) {
+//   if (count>=10) {
+//           console.log("you have 30% discount");
+//       }else if (count>=5) {
+//           console.log("you have 20% discount");
+//       }else if (count>0){
+//           console.log("you have 10% discount");
+//       }else{
+//           console.log("you dont enter any number");
+//       }
+//
+
 //7. Write a simple number guessing game.
+
 //let correct=34
 //let number=parseInt(prompt("add  number between 1 to 100"))
 //if(correct==number){
