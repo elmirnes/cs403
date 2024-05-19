@@ -87,3 +87,4 @@
 //console.log(typeof obj); //object
 //let arr = ['a', 'b', 'c'] 
 //console.log(typeof arr); //object
+console.log(typeof null);
