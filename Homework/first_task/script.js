@@ -82,9 +82,8 @@
 //let city;
 //console.log(typeof city); //undefined
 //let qualification = null
-//console.log(qualification); //null
+//console.log(typeof qualification); //object
 //let obj = { name: 'ulfat' }
 //console.log(typeof obj); //object
 //let arr = ['a', 'b', 'c'] 
 //console.log(typeof arr); //object
-console.log(typeof null);
