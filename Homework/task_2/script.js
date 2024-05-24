@@ -169,7 +169,7 @@
  //3) Alinan yeni arrayi stringe cevirin(join)
 //console.log(replacedFullName.join());
 
-let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
+//let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
 
 // QEYD - Bu tasklarda "arr" arrayindan istifade edilecekdir.....
 
@@ -261,67 +261,67 @@ let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 
 //})
 //console.log(countIndex);
 ///////////// TASK 12//////////////
-let arr2 = [
-    {
-        name: 'test',
-        key: 1
-    },
-    {
-        name: 'task',
-        key: 2
-    },
-    {
-        name: 'tanqo',
-        key: 3
-    },
-    {
-        name: 'like',
-        key: 4
-    },
-    {
-        name: 'task',
-        key: 5
-    },
-    {
-        name: 'trust',
-        key: 6
-    },
-    {
-        name: 'test',
-        key: 7
-    },
-    {
-        name: 'last',
-        key: 8
-    },
-    {
-        name: 'tanqo',
-        key: 9
-    },
-    {
-        name: 'elephant',
-        key: 10
-    },
-    {
-        name: 'love',
-        key: 11
-    },
-    {
-        name: 'small',
-        key: 12
-    },
-    {
-        name: 'little',
-        key: 13
-    },
-]
+//let arr2 = [
+//    {
+//        name: 'test',
+//        key: 1
+//    },
+//    {
+//        name: 'task',
+//        key: 2
+//    },
+//    {
+//        name: 'tanqo',
+//        key: 3
+//    },
+//    {
+//        name: 'like',
+//        key: 4
+//    },
+//    {
+//        name: 'task',
+//        key: 5
+//    },
+//    {
+//        name: 'trust',
+//        key: 6
+//    },
+//    {
+//        name: 'test',
+//        key: 7
+//    },
+//    {
+//        name: 'last',
+//        key: 8
+//    },
+//    {
+//        name: 'tanqo',
+//        key: 9
+//    },
+//    {
+//        name: 'elephant',
+//        key: 10
+//    },
+//    {
+//        name: 'love',
+//        key: 11
+//    },
+//    {
+//        name: 'small',
+//        key: 12
+//    },
+//    {
+//        name: 'little',
+//        key: 13
+//    },
+//]
 //QEYD Bu tasklarda arr2 istifade edilecekdir
 // 16 arr2 de "name"-i "t" herfi ile bashlayan obyektleri yeni arraya yigin
-newArr2=[]
-newArr2 = arr2.filter(nameT => nameT.name.startsWith('t'));
-console.log(newArr2);
+//newArr2=[]
+//newArr2 = arr2.filter(nameT => nameT.name.startsWith('t'));
+//console.log(newArr2);
 // 17 arr2 de "name"-i "t" herfi ile bashlayib "t" herfi ile biten obyektlerin sayini tapin
-console.log(arr2.filter((startEnd)=> startEnd.name.startsWith("t") && startEnd.name.endsWith("t")).length)
+//console.log(arr2.filter((startEnd)=> startEnd.name.startsWith("t") && startEnd.name.endsWith("t")).length)
 // 18 arr2 de "name"-i "t" herfi ile bashlayib "t" herfi ile biten obyektlerin "key"- lerinin cemini tapin
 //sum=0
 //let newArr3 = arr2.filter((startEnd)=> {
@@ -375,22 +375,19 @@ console.log(arr2.filter((startEnd)=> startEnd.name.startsWith("t") && startEnd.n
 //console.log(object.name)
 
 // 24 arr2 de terkibinde 2 'L' herfi olan obyekt(ler)in index(ler)ini tapin.
-let indices = [];
-
-arr2.forEach((item, index) => {
-    if ((item.name.match(/l/gi) || []).length === 2) {// /l means i want l /i  This is the flag for uppercase and lowercase letters to be accepted as the same
-        indices.push(index);
-    }
-});
-
-console.log(indices);
+//let indices = [];
+//
+//arr2.forEach((item, index) => {
+//    if ((item.name.match(/l/gi) || []).length === 2) {// /l means i want l /i  This is the flag for uppercase and lowercase letters to be accepted as the same
+//        indices.push(index);
+//    }
+//});
+//console.log(indices);
 // 25 arr2 de terkibinde 2 't' herfi olan obyekt(ler)in key(ler)ini tapin.
-let keys = [];
-
-arr2.forEach(item => {
-    if ((item.name.match(/t/gi) || []).length === 2) {
-        keys.push(item.key);
-    }
-});
-
-console.log(keys);
+//let keys = [];
+//arr2.forEach(item => {
+//    if ((item.name.match(/t/gi) || []).length === 2) {
+//        keys.push(item.key);
+//    }
+//});
+//console.log(keys);
