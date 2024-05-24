@@ -95,5 +95,3 @@ femmult=1
 let femage = students.filter((studentGender)=>studentGender.gender=="Female")  
 femage.map((studentAge)=>femmult*=studentAge.age) 
 console.log(femmult);
-
-
