@@ -375,7 +375,6 @@ console.log(arr2.filter((startEnd)=> startEnd.name.startsWith("t") && startEnd.n
 //console.log(object.name)
 
 // 24 arr2 de terkibinde 2 'L' herfi olan obyekt(ler)in index(ler)ini tapin.
-countOfL=2
 let indices = [];
 
 arr2.forEach((item, index) => {
