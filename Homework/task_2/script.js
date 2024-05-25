@@ -261,60 +261,60 @@
 //})
 //console.log(countIndex);
 ///////////// TASK 12//////////////
-//let arr2 = [
-//    {
-//        name: 'test',
-//        key: 1
-//    },
-//    {
-//        name: 'task',
-//        key: 2
-//    },
-//    {
-//        name: 'tanqo',
-//        key: 3
-//    },
-//    {
-//        name: 'like',
-//        key: 4
-//    },
-//    {
-//        name: 'task',
-//        key: 5
-//    },
-//    {
-//        name: 'trust',
-//        key: 6
-//    },
-//    {
-//        name: 'test',
-//        key: 7
-//    },
-//    {
-//        name: 'last',
-//        key: 8
-//    },
-//    {
-//        name: 'tanqo',
-//        key: 9
-//    },
-//    {
-//        name: 'elephant',
-//        key: 10
-//    },
-//    {
-//        name: 'love',
-//        key: 11
-//    },
-//    {
-//        name: 'small',
-//        key: 12
-//    },
-//    {
-//        name: 'little',
-//        key: 13
-//    },
-//]
+let arr2 = [
+    {
+        name: 'test',
+        key: 1
+    },
+    {
+        name: 'task',
+        key: 2
+    },
+    {
+        name: 'tanqo',
+        key: 3
+    },
+    {
+        name: 'like',
+        key: 4
+    },
+    {
+        name: 'task',
+        key: 5
+    },
+    {
+        name: 'trust',
+        key: 6
+    },
+    {
+        name: 'test',
+        key: 7
+    },
+    {
+        name: 'last',
+        key: 8
+    },
+    {
+        name: 'tanqo',
+        key: 9
+    },
+    {
+        name: 'elephant',
+        key: 10
+    },
+    {
+        name: 'love',
+        key: 11
+    },
+    {
+        name: 'small',
+        key: 12
+    },
+    {
+        name: 'little',
+        key: 13
+    },
+]
 //QEYD Bu tasklarda arr2 istifade edilecekdir
 // 16 arr2 de "name"-i "t" herfi ile bashlayan obyektleri yeni arraya yigin
 //newArr2=[]
@@ -375,19 +375,33 @@
 //console.log(object.name)
 
 // 24 arr2 de terkibinde 2 'L' herfi olan obyekt(ler)in index(ler)ini tapin.
-//let indices = [];
+//let indices = [];//with forEach
 //
 //arr2.forEach((item, index) => {
 //    if ((item.name.match(/l/gi) || []).length === 2) {// /l means i want l /i  This is the flag for uppercase and lowercase letters to be accepted as the same
 //        indices.push(index);
 //    }
-//});
+//});___OR___
 //console.log(indices);
+//let arrL=[]//with For
+//for (let index = 0; index < arr2.length; index++) {
+//    const element = arr2[index];
+//    if ((element.name.match(/l/gi)|| []).length===2){
+//        arrL.push(index)
+//    }
+//}console.log(arrL);
 // 25 arr2 de terkibinde 2 't' herfi olan obyekt(ler)in key(ler)ini tapin.
-//let keys = [];
+//let keys = [];//with forEach
 //arr2.forEach(item => {
 //    if ((item.name.match(/t/gi) || []).length === 2) {
 //        keys.push(item.key);
 //    }
-//});
+//});//OR
 //console.log(keys);
+//let arrT=[]//with For
+//for (let index = 0; index < arr2.length; index++) {
+//    const element = arr2[index];
+//    if ((element.name.match(/t/gi)|| []).length===2){
+//        arrT.push(element.key)
+//    }
+//}console.log(arrT);
