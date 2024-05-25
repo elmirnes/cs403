@@ -47,6 +47,7 @@
 //console.log(arr2.slice(2,7));//fuad is not included in this code
 //console.log(arr2.slice(2,8));//in this code, entering fuada gives the result
 // 2.Change Gulshen to Rovshen 
+//console.log(arr2.map(item=>item.replace("Gulshen","Rovshen"))); 
 //console.log( arr2.toSpliced(4,1,"Rovshen"))____//OR
 //let indexOfGul=( arr2.indexOf("Gulshen"))
 //console.log( arr2.toSpliced(indexOfGul,1,"Rovshen"))
@@ -177,7 +178,7 @@
  //3) Alinan yeni arrayi stringe cevirin(join)
 //console.log(replacedFullName.join());
 
-//let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
+let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
 
 // QEYD - Bu tasklarda "arr" arrayindan istifade edilecekdir.....
 
@@ -195,24 +196,21 @@
 //arr.filter((numSum)=>sum+=numSum)
 //console.log(sum);
 
+
 //6) arrayda tekrar olunan reqemleri artan sira ile duzun
+//console.log(arr.sort((a,b) => a-b));
 
 //console.log(arr.sort());//sort code is true for this situation
-//count=0
-//arr.filter((repeatedNumbers)=>{
-//  if (repeatedNumbers) {
-//  }
-//})
 //7) arraydaki en boyuk reqemi tapin ve nece defe tekrarlandigini gosterin(Math.max)
 //maxNum = Math.max(...arr)
 //console.log(maxNum);
-//indexOfMax=0
+//countOfMax=0
 //arr.filter((maxn)=>{
 //  if (maxn===maxNum){
-//    indexOfMax+=1
+//    countOfMax+=1
 //  }
 //})
-//console.log(indexOfMax);
+//console.log(countOfMax);
 
 
 //8) Adinizdaki herflerin sayini tapin ve hemin sayin arrayda olub olmamasini yoxlayin Meselen Ulfat adinda 5 herf var ve 5 arrayda var(includes)
