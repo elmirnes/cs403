@@ -13,6 +13,13 @@
 //arr1.shift()//____///OR
 //console.log(arr1);
 //arr1.splice(0,2)
+//console.log(arr1);_____//OR
+//i=0
+//while (i<2) {
+//    arr1.shift()
+//    i+=1
+//}
+//
 //console.log(arr1);
 // 4.Add three numbers (0,9,11) in front of arr1(unshift)
 //arr1.unshift(0,9,11)
@@ -40,8 +47,9 @@
 //console.log(arr2.slice(2,7));//fuad is not included in this code
 //console.log(arr2.slice(2,8));//in this code, entering fuada gives the result
 // 2.Change Gulshen to Rovshen 
-//console.log(( arr2.indexOf("Gulshen")))
-//console.log( arr2.toSpliced(4,1,"Rovshen"))
+//console.log( arr2.toSpliced(4,1,"Rovshen"))____//OR
+//let indexOfGul=( arr2.indexOf("Gulshen"))
+//console.log( arr2.toSpliced(indexOfGul,1,"Rovshen"))
 
 // 3.Console each name with map
 //console.log(arr2.map((fname) => fname));
@@ -364,6 +372,7 @@ let arr2 = [
 // 22 arr2 de "name"-inin uzunlugu 4 olan obyektlerden ibaret yeni array yaradin.
 //let namesWithLengthFour = arr2.filter(obj => obj.name.length === 4);
 //console.log(namesWithLengthFour);
+
 // 23 arr2 de en boyuk "key" - i olan obyektin "name"-i ni tapin
 //let object=arr2[0]
 //for (let index = 0; index < arr2.length; index++) {
@@ -396,7 +405,7 @@ let arr2 = [
 //    if ((item.name.match(/t/gi) || []).length === 2) {
 //        keys.push(item.key);
 //    }
-//});//OR
+//});_____OR_____
 //console.log(keys);
 //let arrT=[]//with For
 //for (let index = 0; index < arr2.length; index++) {
