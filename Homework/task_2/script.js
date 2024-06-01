@@ -1,9 +1,24 @@
 ////////////// TASK 6 //////////////+
-
 //const arr1 = [9, 1, 5, 8, 9, 9, 3, 22, 11, 12, 32, 8]
 // 1.Sum all the numbers in 'arr1'
-//sum=0 
+//sum=0
 //arr1.map((item) => sum+=item)
+//console.log(sum);
+///___SecondSolution___\\\
+//const sumarr1 = arr1.reduce((neww, current) => neww + current, 0);
+//console.log(sumarr1);
+//___thirdSolutin___\\
+//sum=0
+//for (let index = 0; index < arr1.length; index++) {
+//    const element = arr1[index];
+//    sum+=element
+//}
+//console.log(sum);
+//___fourthSolution___\\
+//sum=0
+//arr1.forEach(element => {
+//    sum+=element
+//});
 //console.log(sum);
 // 2.Add two numbers (10,88) to end of arr1 (push methods)
 //arr1.push(10,88)
@@ -12,8 +27,9 @@
 //arr1.shift()
 //arr1.shift()//____///OR
 //console.log(arr1);
-//arr1.splice(0,2)
-//console.log(arr1);_____//OR
+//arr1.splice(0,2)//it changes array value
+//console.log(arr1);//_____//OR
+//console.log(arr1.toSpliced(0,2));//___//OR
 //i=0
 //while (i<2) {
 //    arr1.shift()
@@ -21,10 +37,15 @@
 //}
 //
 //console.log(arr1);
+//___thirdSolution___\\
+//for (let index = 0; index <2; index++) {
+//   arr1.shift()
+//}
+//console.log(arr1);
 // 4.Add three numbers (0,9,11) in front of arr1(unshift)
 //arr1.unshift(0,9,11)
 //console.log(arr1);
- //5.Remove four numbers in front of arr1(shift)
+//5.Remove four numbers in front of arr1(shift)
 //___firstSolution(easy version)___\\
 //arr1.shift()
 //arr1.shift()
@@ -38,6 +59,11 @@
 //    count += 1
 //}
 //console.log(arr1)
+//___thirdSolution
+//for (let i = 0; i < 4; i++) {
+//    arr1.shift();
+//}
+//console.log(arr1);
 
 ////////////// TASK 7 //////////////+
 //const arr2 = ["Murad", "Anar", "Rufet", 'Anar', 'Gulshen', 'Nermin', "Ilkin", "Fuad", "Anar"]
@@ -46,31 +72,104 @@
 //console.log(arr2.lastIndexOf("Fuad"));
 //console.log(arr2.slice(2,7));//fuad is not included in this code
 //console.log(arr2.slice(2,8));//in this code, entering fuada gives the result
-// 2.Change Gulshen to Rovshen 
-//console.log(arr2.map(item=>item.replace("Gulshen","Rovshen"))); 
+//___modified__\\
+//indexOfRufet=arr2.indexOf("Rufet")
+//indexOfFuad=arr2.indexOf("Fuad")
+//console.log(arr2.slice(indexOfRufet,indexOfFuad));
+//___secondSolution___\\
+//rufetToFuad=[]
+//for (let index = indexOfRufet; index < indexOfFuad; index++) {
+//    const element = arr2[index];
+//    rufetToFuad.push(element)
+//}
+//console.log(rufetToFuad);
+//___thirdSolution___\\
+//newRToF=[]
+//while (indexOfRufet<indexOfFuad) {
+//    newRToF.push(arr2[indexOfRufet]);
+//    indexOfRufet+=1
+//}
+//console.log(newRToF);
+// 2.Change Gulshen to Rovshen
+//console.log(arr2.map(item=>item.replace("Gulshen","Rovshen")));
 //console.log( arr2.toSpliced(4,1,"Rovshen"))____//OR
 //let indexOfGul=( arr2.indexOf("Gulshen"))
 //console.log( arr2.toSpliced(indexOfGul,1,"Rovshen"))
-
-// 3.Console each name with map
-//console.log(arr2.map((fname) => fname));
+// 3.Console each name with map//fixed
+//arr2.map(firstName=>{
+//    console.log(firstName);
+//})
+//___secondSolution___\\ with for
+//for (let index = 0; index < arr2.length; index++) {
+//    const element = arr2[index];
+//    console.log(element);
+//}
+//___thirdSolution__\\With foreach
+//arr2.forEach(item=>console.log(item))
 // 4.Console only names which is Anar
 //console.log(arr2.filter((onlyanar)=> onlyanar=="Anar"));//i can use === too. if I use it, their type and value must be equal
+//___secondSolution__\\
+//let onlyAnar=[]
+//for (let index = 0; index < arr2.length; index++) {
+//    const element = arr2[index];
+//    if (element=="Anar") {
+//        onlyAnar.push(element)
+//    }
+//}
+//console.log(onlyAnar);
+//___thirdSolution___\\with function
+//function anarcik(arr) {
+//    functForAnar=[]
+//    for (let index = 0; index < arr.length; index++) {
+//        const element = arr[index];
+//        if (element === "Anar") {
+//            functForAnar.push(element);
+//        }
+//    }console.log(functForAnar);
+//    return functForAnar
+//}
+//anarcik(arr2)
+
 // 5.Console all names where name is Anar, then change it to "Perviz"
 
 //console.log(arr2.toString().replaceAll("Anar","Perviz").split(','));
+
+//___secondSolution___\\
+//for (let index = 0; index < arr2.length; index++) {
+//    if (arr2[index] === "Anar") {
+//        arr2[index] = "Perviz";
+//    }
+//}
+//console.log(arr2);
 
 // 6.Console last second value of arr2
 //console.log(arr2[arr2.length - 2]);
 // 7.Console length of arr2
 //console.log(arr2.length)
-
-////////////// TASK 8 //////////////
+//___secondSolution___
+//length=0
+//arr2.forEach(item=>
+//    length+=1
+//)
+//console.log(length);
+//////////////// TASK 8 //////////////
 //const arr3 = ["9", 10, 100, 11, 'true', 'undefined', true, null, 'something', false]
 
 //1.Show only numbers
 //console.log(arr3.filter((num)=>typeof num==="number"));//I put === here because it only asks us for number values.
 
+//___SecondSolution___\\
+
+//for (let index = 0; index < arr3.length; index++) {
+//    const element = arr3[index];
+//    if (typeof element !== "number"){
+//        arr3.splice(index,1)
+//        index--
+//    }else{
+//        continue
+//    }
+//}
+//console.log(arr3);
 //2.Show only true values and //3.Show only false values__???
 //let newarr=[]
 //let falsy=[]
@@ -92,28 +191,90 @@
 //const numbers = [1, 2, 4, 5, 3, 2, 5, 7, 8, 9, 11, 12, 22, 24, 25]
 // 1.Console (only even numbers)
 //console.log(numbers.filter((evenNum) => evenNum % 2=== 0));
+//function evenNum(array) {
+//   for (let index = 0; index < array.length; index++) {
+//    const element = array[index];
+//        if (element%2==0) {
+//            continue
+//        }else{
+//            array.splice(index,1)
+//            index--
+//        }
+//    }
+//    console.log(array);
+//}
+//evenNum(numbers)
 // 2.Console (only odd numbers)
 //console.log(numbers.filter((notEvenNum) => notEvenNum % 2 !== 0));//OR
 //console.log(numbers.filter((oddNum) => oddNum % 2 === 1));
+//function oddNum(array) {
+//for (let index = 0; index < array.length; index++) {
+//    const element = array[index];
+//    if (element%2!==0) {
+//        continue
+//   }else{
+//        array.splice(index,1)
+//        index--
+//    }
+//}console.log(array);
+//}
+//oddNum(numbers)
 
 /////////////// TASK 9 //////////////+
 //const arr4 = [10, "29", 10, 100, 11, 'true', false, 'undefined', true, null, 'something', false]
 // // 1.Console all values of arr4 -
 //  //if value is number add it 10, if value is string add to it value + is string,if is value falsy value add to it value+ is falsly value(with return word)
- // Example: [10,'true',false]
- // Result: [20, "true is string", "false is falsy value"]____SEHVDI BAXX//
+// Example: [10,'true',false]
+// Result: [20, "true is string", "false is falsy value"]____SEHVDI BAXX//
 //minLengthStr=1
 // let updated = arr4.map((value) => {
 //  if (typeof value === 'number'&&value!==0) {
 //    return value + 10;
-//  }else if (typeof value === 'string'&& value.length>=minLengthStr) { 
+//  }else if (typeof value === 'string'&& value.length>=minLengthStr) {
 //    return value + " is string";
 //  }else if( !value){
 //    return value + " is falsy value";
 //  }else {
 //    return value + " is truthy"
-//  }}); 
-//console.log( updated);
+//  }});
+//console.log( updated);//OR
+//___secondSolution___\\//__arrowFunction
+//const modArr4 = (value )=> {
+//    if (typeof value === 'number') {
+//      return value + 10;//we can use console.log to
+//      //console.log(value + 10);
+//    }
+//    else if (typeof value === 'string') {
+//      return `${value} is string`;
+//      //console.log(`${value} is string`);
+//    }
+//    else if (!value) {
+//      return `${value} is falsy value`;
+//      //console.log(`${value} is falsy value`);
+//    }
+//    return `${value} is truthy value`;
+//    //console.log(`${value} is truthy value`);
+//  };
+//const resultArr4 = arr4.map(modArr4);
+//console.log(resultArr4);
+////___thirdSolution___\\
+//let i = 0;
+//nameless=[]
+//while (i < arr4.length) {
+//    let valArr4 = arr4[i];
+//    if (typeof valArr4 === 'number' && valArr4 !== 0) {
+//        nameless.push(valArr4 + 10);
+//    } else if (typeof valArr4 === 'string' && valArr4.length >= 1) {
+//        nameless.push(`${valArr4} is string`);
+//    } else if (!valArr4) {
+//        nameless.push(`${valArr4} is falsy`);
+//    } else {
+//        nameless.push(`${valArr4} is truthy`);
+//    }
+//    i++;
+//}
+//console.log(nameless);
+
 // 2.Sum all numbers of arr4
 //sumInt=0
 //arr4.filter((number)=>{
@@ -122,6 +283,15 @@
 //    }
 //});
 //console.log(sumInt);
+//___withArrowFunction___\\
+//sumArr4=0
+//const numarr4= value =>{
+//    if (typeof value=="number" ){
+//        sumArr4+=value
+//    }
+//}
+//const result = arr4.filter(numarr4)
+//console.log(sumArr4);
 
 // 3.Count only the values that are true
 //console.log(arr4.filter((truthy)=>truthy ).length);
@@ -162,9 +332,9 @@
 ////////////// TASK 11 //////////////
 
 // let fullName = 'Ulfat Zakirli Rovshen'
- //1) Ad soyad ata adinizi butov sheklde goturun ve array sheklinde herflerine ayirin(split)
+//1) Ad soyad ata adinizi butov sheklde goturun ve array sheklinde herflerine ayirin(split)
 // console.log(fullName.split(""));
- //2) FullName'də soyadinizi adinizin onune keciren alqoritm yazin
+//2) FullName'də soyadinizi adinizin onune keciren alqoritm yazin
 //
 //fullName=fullName.split(" ")
 //console.log(fullName);
@@ -175,7 +345,7 @@
 //
 //replacedFullName=[fullName[1],fullName[0],fullName[2]]//next questions want array to me that is why i create this
 //console.log(replacedFullName);
- //3) Alinan yeni arrayi stringe cevirin(join)
+//3) Alinan yeni arrayi stringe cevirin(join)
 //console.log(replacedFullName.join());
 
 let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
@@ -190,17 +360,35 @@ let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 
 //  }
 //})
 //console.log(count);
+//___withArrowFunction__\\
+//countArr=0
+//const only5= value =>{
+//    if (typeof value=="number" && value===5){
+//        countArr+=1
+//    }
+//}
+//const resultArrFor5 = arr.filter(only5)
+//console.log(countArr);
 
 //5) Yuxaridaki arraydaki butun reqemlerin cemini tapin
 //sum=0
 //arr.filter((numSum)=>sum+=numSum)
 //console.log(sum);
-
+//___withArrowFunction___\\
+//sumArr=0
+//const numSum= value =>{
+//    if (typeof value=="number"){
+//        sumArr+=value
+//    }
+//}
+//const resultArr = arr.filter(numSum)
+//console.log(sumArr);
 
 //6) arrayda tekrar olunan reqemleri artan sira ile duzun
 //console.log(arr.sort((a,b) => a-b));
-
+console.log([...new Set(arr)].sort((a,b)=> a-b ));
 //console.log(arr.sort());//sort code is true for this situation
+
 //7) arraydaki en boyuk reqemi tapin ve nece defe tekrarlandigini gosterin(Math.max)
 //maxNum = Math.max(...arr)
 //console.log(maxNum);
@@ -267,60 +455,64 @@ let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 
 //})
 //console.log(countIndex);
 ///////////// TASK 12//////////////
-//let arr2 = [
-//    {
-//        name: 'test',
-//        key: 1
-//    },
-//    {
-//        name: 'task',
-//        key: 2
-//    },
-//    {
-//        name: 'tanqo',
-//        key: 3
-//    },
-//    {
-//        name: 'like',
-//        key: 4
-//    },
-//    {
-//        name: 'task',
-//        key: 5
-//    },
-//    {
-//        name: 'trust',
-//        key: 6
-//    },
-//    {
-//        name: 'test',
-//        key: 7
-//    },
-//    {
-//        name: 'last',
-//        key: 8
-//    },
-//    {
-//        name: 'tanqo',
-//        key: 9
-//    },
-//    {
-//        name: 'elephant',
-//        key: 10
-//    },
-//    {
-//        name: 'love',
-//        key: 11
-//    },
-//    {
-//        name: 'small',
-//        key: 12
-//    },
-//    {
-//        name: 'little',
-//        key: 13
-//    },
-//]
+let arr2 = [
+  {
+    name: "test",
+    key: 1,
+  },
+  {
+    name: "task",
+    key: 2,
+  },
+  {
+    name: "tanqo",
+    key: 3,
+  },
+  {
+    name: "like",
+    key: 4,
+  },
+  {
+    name: "task",
+    key: 5,
+  },
+  {
+    name: "trust",
+    key: 6,
+  },
+  {
+    name: "test",
+    key: 7,
+  },
+  {
+    name: "last",
+    key: 8,
+  },
+  {
+    name: "tanqo",
+    key: 9,
+  },
+  {
+    name: "elephant",
+    key: 10,
+  },
+  {
+    name: "love",
+    key: 11,
+  },
+  {
+    name: "small",
+    key: 12,
+  },
+  {
+    name: "little",
+    key: 13,
+  },
+  /*{
+    name: "liTttle",
+    key: 14,
+  },*/
+];
 //QEYD Bu tasklarda arr2 istifade edilecekdir
 // 16 arr2 de "name"-i "t" herfi ile bashlayan obyektleri yeni arraya yigin
 //newArr2=[]
@@ -397,6 +589,18 @@ let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 
 //        arrL.push(index)
 //    }
 //}console.log(arrL);
+//___withSplit
+let indexL = [];
+
+for (let index = 0; index < arr2.length; index++) {
+  const element = arr2[index];
+  const countL = element.name.split("l" || "L").length - 1; //___we can use tolowercase or touppercase too.But i consider that this code will be more useful
+  if (countL === 2) {
+    //ozum ucun length-1 sayin hesablayir l e gore boldukden sonra yerde qalanlara nezaret edir daha sonrasinda ise onlarin sayina gore kod icra olunacaq
+    indexL.push(index);
+  }
+}
+console.log(indexL);
 // 25 arr2 de terkibinde 2 't' herfi olan obyekt(ler)in key(ler)ini tapin.
 //let keys = [];//with forEach
 //arr2.forEach(item => {
@@ -412,3 +616,30 @@ let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 
 //        arrT.push(element.key)
 //    }
 //}console.log(arrT);
+//___secondSolution___\\
+
+let keyT = [];
+
+for (let index = 0; index < arr2.length; index++) {
+  const element = arr2[index];
+  const countL = element.name.split("t" || "T").length - 1; //___we can use tolowercase or touppercase too.But i consider that this code will be more useful
+  if (countL === 2) {
+    //ozum ucun length-1 sayin hesablayir l e gore boldukden sonra yerde qalanlara nezaret edir daha sonrasinda ise onlarin sayina gore kod icra olunacaq
+    keyT.push(element.key);
+  }
+}
+console.log(keyT);
+
+newT = [];
+arr2.filter((arr2KeyT) => {
+  const element = arr2KeyT.name;
+  const firstIndex = element.toLowerCase().indexOf("t");
+  const secondIndex = element.toLowerCase().lastIndexOf("t");
+  //const onetherT = element.toLowerCase().indexOf("t", firstIndex);
+  if ( //firstIndex==onetherT!=-1 && secondIndex==onetherT!=-1
+    firstIndex!=-1 && secondIndex!=-1 &&  firstIndex !=secondIndex  /*&&  onetherT!==secondIndex */
+  ) {
+    newT.push(element);
+  }
+});
+console.log(newT);
