@@ -95,7 +95,6 @@
 //console.log( arr2.toSpliced(4,1,"Rovshen"))____//OR
 //let indexOfGul=( arr2.indexOf("Gulshen"))
 //console.log( arr2.toSpliced(indexOfGul,1,"Rovshen"))
-//__differentSolution___
 //for (let index = 0; index < arr2.length; index++) {
 //  const element = arr2[index];
 //  if (element=='Gulshen') {
@@ -462,7 +461,7 @@
 //  }
 //})
 //console.log(countIndex);
-///////////// TASK 12/////////////
+///////////// TASK 12//////////////
 let arr2 = [
   {
     name: "test",
@@ -515,16 +514,31 @@ let arr2 = [
   {
     name: "little",
     key: 13,
-  },
+  }
 ];
 //QEYD Bu tasklarda arr2 istifade edilecekdir
 // 16 arr2 de "name"-i "t" herfi ile bashlayan obyektleri yeni arraya yigin
 //newArr2=[]
 //newArr2 = arr2.filter(nameT => nameT.name.startsWith('t'));
 //console.log(newArr2);
-
+newArrStartT=[]
+for (let index = 0; index < arr2.length; index++) {
+  const element = arr2[index];
+  if (element.name[0] == "t"|| element.name[0]=="T") {
+    newArrStartT.push(element);
+  }
+}
+console.log(newArrStartT);
 // 17 arr2 de "name"-i "t" herfi ile bashlayib "t" herfi ile biten obyektlerin sayini tapin
 //console.log(arr2.filter((startEnd)=> startEnd.name.startsWith("t") && startEnd.name.endsWith("t")).length)
+arrStartAndEndT=[]
+for (let index = 0; index < arr2.length; index++) {
+  const element = arr2[index].name;
+  if (element.startsWith("t") && element.endsWith('t')){
+    arrStartAndEndT.push(element)
+  }
+}
+console.log(arrStartAndEndT.length);
 // 18 arr2 de "name"-i "t" herfi ile bashlayib "t" herfi ile biten obyektlerin "key"- lerinin cemini tapin
 //sum=0
 //let newArr3 = arr2.filter((startEnd)=> {
@@ -534,6 +548,15 @@ let arr2 = [
 //  }
 //})
 //console.log(sum);
+sumOnlyT=0
+for (let index = 0; index < arr2.length; index++) {
+  const elementKey = arr2[index].key;
+  const elementName= arr2[index].name
+  if (elementName.startsWith("t") && elementName.endsWith("t")){
+    sumOnlyT+=elementKey
+  }
+}
+console.log(sumOnlyT);
 
 // 19 arr2 de "name"-i "e" herfi ile biten obyeklerdeki name-in deyerini "SuperDev" sozu ile evezleyin.
 //arr2.filter((end)=>{
@@ -551,7 +574,20 @@ let arr2 = [
 //    }
 //}
 //console.log(object.key)
+let maxLength = 0;
+let maxKey = 0;
 
+const greater = (array) => {
+  for (let index = 0; index < array.length; index++) {
+    const elementLength = array[index].name.length;
+    if (elementLength > maxLength) {
+      maxLength = elementLength;
+      maxKey = array[index].key;
+    }
+  }
+  return maxKey;
+}
+console.log(greater(arr2));
 // 21 arr2 de "name"-i en uzun olan obyektin indexin kvadratini hesablayin
 //let maxLength = arr2[0].name.length;
 //for (let index = 1; index < arr2.length; index++) {
@@ -567,7 +603,14 @@ let arr2 = [
 // 22 arr2 de "name"-inin uzunlugu 4 olan obyektlerden ibaret yeni array yaradin.
 //let namesWithLengthFour = arr2.filter(obj => obj.name.length === 4);
 //console.log(namesWithLengthFour);
-
+length4=[]
+for (let index = 0; index < arr2.length; index++) {
+  const element = arr2[index].name;
+  if (element.length==4) {
+    length4.push(element)
+  }
+}
+console.log(length4);
 // 23 arr2 de en boyuk "key" - i olan obyektin "name"-i ni tapin
 //let object=arr2[0]
 //for (let index = 0; index < arr2.length; index++) {
@@ -633,9 +676,11 @@ for (let index = 0; index < arr2.length; index++) {
     keyT.push(element.key);
   }
 }
+console.log(keyT);
 
 newT = [];
 arr2.filter((arr2KeyT) => {
+  const elementKeyT=arr2KeyT.key
   const element = arr2KeyT.name;
   const firstIndex = element.toLowerCase().indexOf("t");
   const secondIndex = element.toLowerCase().lastIndexOf("t");
@@ -643,7 +688,7 @@ arr2.filter((arr2KeyT) => {
   if ( //firstIndex==onetherT!=-1 && secondIndex==onetherT!=-1
     firstIndex!=-1 && secondIndex!=-1 &&  firstIndex !=secondIndex  /*&&  onetherT!==secondIndex */
   ) {
-    newT.push(element);
+    newT.push(elementKeyT);
   }
 });
 console.log(newT);
