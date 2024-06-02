@@ -66,7 +66,7 @@
 //console.log(arr1);
 
 ////////////// TASK 7 //////////////+
-const arr2 = ["Murad", "Anar", "Rufet", 'Anar', 'Gulshen', 'Nermin', "Ilkin", "Fuad", "Anar"]
+//const arr2 = ["Murad", "Anar", "Rufet", 'Anar', 'Gulshen', 'Nermin', "Ilkin", "Fuad", "Anar"]
 // 1.Console values from "Rufet" to "Fuad"
 //console.log( arr2.indexOf("Rufet"))
 //console.log(arr2.lastIndexOf("Fuad"));
@@ -96,13 +96,13 @@ const arr2 = ["Murad", "Anar", "Rufet", 'Anar', 'Gulshen', 'Nermin', "Ilkin", "F
 //let indexOfGul=( arr2.indexOf("Gulshen"))
 //console.log( arr2.toSpliced(indexOfGul,1,"Rovshen"))
 //__differentSolution___
-for (let index = 0; index < arr2.length; index++) {
-  const element = arr2[index];
-  if (element=='Gulshen') {
-    arr2.splice(index,1,'Rovshen')
-  }
-}
-console.log(arr2);
+//for (let index = 0; index < arr2.length; index++) {
+//  const element = arr2[index];
+//  if (element=='Gulshen') {
+//    arr2.splice(index,1,'Rovshen')
+//  }
+//}
+//console.log(arr2);
 // 3.Console each name with map//fixed
 //arr2.map(firstName=>{
 //    console.log(firstName);
@@ -462,8 +462,8 @@ console.log(arr2);
 //  }
 //})
 //console.log(countIndex);
-///////////// TASK 12//////////////
-/*let arr2 = [
+///////////// TASK 12/////////////
+let arr2 = [
   {
     name: "test",
     key: 1,
@@ -516,16 +516,13 @@ console.log(arr2);
     name: "little",
     key: 13,
   },
-  {
-    name: "liTttle",
-    key: 14,
-  },
 ];
 //QEYD Bu tasklarda arr2 istifade edilecekdir
 // 16 arr2 de "name"-i "t" herfi ile bashlayan obyektleri yeni arraya yigin
 //newArr2=[]
 //newArr2 = arr2.filter(nameT => nameT.name.startsWith('t'));
 //console.log(newArr2);
+
 // 17 arr2 de "name"-i "t" herfi ile bashlayib "t" herfi ile biten obyektlerin sayini tapin
 //console.log(arr2.filter((startEnd)=> startEnd.name.startsWith("t") && startEnd.name.endsWith("t")).length)
 // 18 arr2 de "name"-i "t" herfi ile bashlayib "t" herfi ile biten obyektlerin "key"- lerinin cemini tapin
@@ -636,23 +633,17 @@ for (let index = 0; index < arr2.length; index++) {
     keyT.push(element.key);
   }
 }
-console.log(keyT);
-*/
-/*newT = [];
-countT=0
+
+newT = [];
 arr2.filter((arr2KeyT) => {
   const element = arr2KeyT.name;
   const firstIndex = element.toLowerCase().indexOf("t");
   const secondIndex = element.toLowerCase().lastIndexOf("t");
   //const onetherT = element.toLowerCase().indexOf("t", firstIndex);
-  if (firstIndex !== -1 /*&& secondIndex !== -1 && firstIndex !== secondIndex*//*) {
-    countT++;
-  }
-
-  if (countT === 2) {
+  if ( //firstIndex==onetherT!=-1 && secondIndex==onetherT!=-1
+    firstIndex!=-1 && secondIndex!=-1 &&  firstIndex !=secondIndex  /*&&  onetherT!==secondIndex */
+  ) {
     newT.push(element);
-    countT = 0; // Reset countT after pushing to newT
   }
 });
-
-console.log(newT);*/
+console.log(newT);
