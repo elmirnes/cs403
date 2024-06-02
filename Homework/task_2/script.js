@@ -66,7 +66,7 @@
 //console.log(arr1);
 
 ////////////// TASK 7 //////////////+
-//const arr2 = ["Murad", "Anar", "Rufet", 'Anar', 'Gulshen', 'Nermin', "Ilkin", "Fuad", "Anar"]
+const arr2 = ["Murad", "Anar", "Rufet", 'Anar', 'Gulshen', 'Nermin', "Ilkin", "Fuad", "Anar"]
 // 1.Console values from "Rufet" to "Fuad"
 //console.log( arr2.indexOf("Rufet"))
 //console.log(arr2.lastIndexOf("Fuad"));
@@ -95,6 +95,14 @@
 //console.log( arr2.toSpliced(4,1,"Rovshen"))____//OR
 //let indexOfGul=( arr2.indexOf("Gulshen"))
 //console.log( arr2.toSpliced(indexOfGul,1,"Rovshen"))
+//__differentSolution___
+for (let index = 0; index < arr2.length; index++) {
+  const element = arr2[index];
+  if (element=='Gulshen') {
+    arr2.splice(index,1,'Rovshen')
+  }
+}
+console.log(arr2);
 // 3.Console each name with map//fixed
 //arr2.map(firstName=>{
 //    console.log(firstName);
@@ -348,7 +356,7 @@
 //3) Alinan yeni arrayi stringe cevirin(join)
 //console.log(replacedFullName.join());
 
-let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
+//let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
 
 // QEYD - Bu tasklarda "arr" arrayindan istifade edilecekdir.....
 
@@ -369,7 +377,7 @@ let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 
 //}
 //const resultArrFor5 = arr.filter(only5)
 //console.log(countArr);
-
+//console.log(arr.filter((num)=>num===5).length);
 //5) Yuxaridaki arraydaki butun reqemlerin cemini tapin
 //sum=0
 //arr.filter((numSum)=>sum+=numSum)
@@ -383,10 +391,11 @@ let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 
 //}
 //const resultArr = arr.filter(numSum)
 //console.log(sumArr);
+//console.log(sumarr = arr.reduce((neww, current) => neww + current, 0));
 
 //6) arrayda tekrar olunan reqemleri artan sira ile duzun
 //console.log(arr.sort((a,b) => a-b));
-console.log([...new Set(arr)].sort((a,b)=> a-b ));
+//console.log([...new Set(arr)].sort((a,b)=> a-b ));
 //console.log(arr.sort());//sort code is true for this situation
 
 //7) arraydaki en boyuk reqemi tapin ve nece defe tekrarlandigini gosterin(Math.max)
@@ -399,7 +408,6 @@ console.log([...new Set(arr)].sort((a,b)=> a-b ));
 //  }
 //})
 //console.log(countOfMax);
-
 
 //8) Adinizdaki herflerin sayini tapin ve hemin sayin arrayda olub olmamasini yoxlayin Meselen Ulfat adinda 5 herf var ve 5 arrayda var(includes)
 //let myName="Elmir"
@@ -455,7 +463,7 @@ console.log([...new Set(arr)].sort((a,b)=> a-b ));
 //})
 //console.log(countIndex);
 ///////////// TASK 12//////////////
-let arr2 = [
+/*let arr2 = [
   {
     name: "test",
     key: 1,
@@ -508,10 +516,10 @@ let arr2 = [
     name: "little",
     key: 13,
   },
-  /*{
+  {
     name: "liTttle",
     key: 14,
-  },*/
+  },
 ];
 //QEYD Bu tasklarda arr2 istifade edilecekdir
 // 16 arr2 de "name"-i "t" herfi ile bashlayan obyektleri yeni arraya yigin
@@ -629,17 +637,22 @@ for (let index = 0; index < arr2.length; index++) {
   }
 }
 console.log(keyT);
-
-newT = [];
+*/
+/*newT = [];
+countT=0
 arr2.filter((arr2KeyT) => {
   const element = arr2KeyT.name;
   const firstIndex = element.toLowerCase().indexOf("t");
   const secondIndex = element.toLowerCase().lastIndexOf("t");
   //const onetherT = element.toLowerCase().indexOf("t", firstIndex);
-  if ( //firstIndex==onetherT!=-1 && secondIndex==onetherT!=-1
-    firstIndex!=-1 && secondIndex!=-1 &&  firstIndex !=secondIndex  /*&&  onetherT!==secondIndex */
-  ) {
+  if (firstIndex !== -1 /*&& secondIndex !== -1 && firstIndex !== secondIndex*//*) {
+    countT++;
+  }
+
+  if (countT === 2) {
     newT.push(element);
+    countT = 0; // Reset countT after pushing to newT
   }
 });
-console.log(newT);
+
+console.log(newT);*/
