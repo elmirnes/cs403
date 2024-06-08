@@ -160,7 +160,7 @@
 //)
 //console.log(length);
 //////////////// TASK 8 //////////////
-//const arr3 = ["9", 10, 100, 11, 'true', 'undefined', true, null, 'something', false]
+const arr3 = ["9", 10, 100, 11, 'true', 'undefined', true, null, 'something', false]
 
 //1.Show only numbers
 //console.log(arr3.filter((num)=>typeof num==="number"));//I put === here because it only asks us for number values.
@@ -194,6 +194,15 @@
 //4.Show only strings
 //console.log(arr3.filter((string)=>typeof string==="string"))
 
+//___WithFor___\\
+onlyString=[]
+for (let index = 0; index < arr3.length; index++) {
+  const element = arr3[index];
+  if (typeof element=='string') {
+    onlyString.push(element)
+  }
+}
+console.log(onlyString);
 ////////////// TASK 8 //////////////+
 //const numbers = [1, 2, 4, 5, 3, 2, 5, 7, 8, 9, 11, 12, 22, 24, 25]
 // 1.Console (only even numbers)
@@ -228,7 +237,7 @@
 //oddNum(numbers)
 
 /////////////// TASK 9 //////////////+
-//const arr4 = [10, "29", 10, 100, 11, 'true', false, 'undefined', true, null, 'something', false]
+const arr4 = [10, "29", 10, 100, 11, 'true', false, 'undefined', true, null, 'something', false]
 // // 1.Console all values of arr4 -
 //  //if value is number add it 10, if value is string add to it value + is string,if is value falsy value add to it value+ is falsly value(with return word)
 // Example: [10,'true',false]
@@ -308,6 +317,21 @@
 // 5.Count only the values that are false
 //console.log(arr4.filter((falsly)=>!falsly ).length);
 
+//___mixOf3And5___\\
+//___withFunction___\\
+function countOfBoolen(array) {
+  countofTrue=0
+  countOfFalse=0
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    if (element) {
+      countofTrue+=1
+    }else{
+      countOfFalse+=1
+    }
+  }console.log('false deyerlerin sayi',countOfFalse,'true deyerlerin sayi ise',countofTrue);
+}
+countOfBoolen(arr4)
 ////////////// TASK 10 //////////////+
 // 1.Create a object add your name, surname, age and city.
 //const person = {
@@ -355,7 +379,7 @@
 //3) Alinan yeni arrayi stringe cevirin(join)
 //console.log(replacedFullName.join());
 
-//let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
+let arr = [4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7]
 
 // QEYD - Bu tasklarda "arr" arrayindan istifade edilecekdir.....
 
@@ -408,11 +432,30 @@
 //})
 //console.log(countOfMax);
 
+//___withFunction___\\
+function findMaxNumandCount(array) {
+  maxNum=Math.max(...array)
+  countofMaxNum=0
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    if (element==maxNum) {
+      countofMaxNum+=1
+    }
+  }console.log(maxNum,countofMaxNum);
+}
+findMaxNumandCount(arr)
 //8) Adinizdaki herflerin sayini tapin ve hemin sayin arrayda olub olmamasini yoxlayin Meselen Ulfat adinda 5 herf var ve 5 arrayda var(includes)
 //let myName="Elmir"
 //nameLength=myName.length
 //console.log(nameLength);
 //console.log(arr.includes(nameLength));
+
+//function includesName(myname) {
+//  myname=prompt("adinizi daxil edin")
+//  nameLength=myname.length
+//  console.log(arr.includes(nameLength));
+//}
+//includesName("elmir")
 //9) arraydaki ilk 3 e bolunende qaliqda 2 alinan reqemi ve hemin reqemin arraydaki indexini tapin
 ///easiest option
 //firstindex=[]
@@ -422,7 +465,17 @@
 //  }
 //});
 //console.log(firstindex[0]);
-
+//___withFunction___\\
+function first3AndIndex(array) {
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    if (element%3==2) {
+      console.log(element,array.indexOf(element));
+      break
+    }
+  }
+}
+first3AndIndex(arr)
 //10) arraydaki en boyuk reqemin ilk indexini tapin
 //max=0
 //console.log(arr.filter((maxnum)=>{
@@ -431,6 +484,22 @@
 //  }
 //}));
 //console.log(max);
+
+//const findIndexOfMax = (arr) => {
+//  if (arr.length === 0) return -1; // Boş dizi kontrolü
+//
+//  let maxIndex = 0;
+//
+//  arr.forEach((num, index) => {
+//    if (num > arr[maxIndex]) {
+//      maxIndex = index;
+//    }
+//  });
+//
+//  return maxIndex;
+//}
+//console.log(findIndexOfMax(arr));
+
 //11) 4 reqeminin arrayin hansi indexlerinde oldugunu gosterin
 //let  newArr=[]
 //arr.map((numbers,index)=>{
@@ -439,10 +508,32 @@
 //  }
 //})
 //console.log(newArr);
+function findIndex4(array) {
+  const indexOf4 = [];
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    if (element === 4) {
+      indexOf4.push(index);
+    }
+  }
+  console.log(indexOf4);
+}
 
+findIndex4(arr);
 //12) 5 reqeminin arraydaki en boyuk ve en kicik indexlerini tapin
 //console.log(arr.indexOf(5));
 //console.log(arr.lastIndexOf(5));
+
+function firstLastIndex(arr) {
+  let searchedNum = parseInt(prompt('axtardginiz ededi daxil edin:'));
+  if (!isNaN(searchedNum)) {
+    console.log(arr.indexOf(searchedNum));
+    console.log(arr.lastIndexOf(searchedNum));
+  } else {
+    console.log('axtardginiz ededi mövcud deyil.');
+  }
+}
+firstLastIndex(arr);
 //13) "arr" - arrayindan reqemleri 2 den boyuk olan yeni array yaradin ve alinmish arrayla "arr" arrayinin uzunluqlari ferqini hesablayin//suali basa dusmedim dusduyum kimi edirem
 
 //let newArr=[]
@@ -461,6 +552,13 @@
 //  }
 //})
 //console.log(countIndex);
+//___withFunction___\\
+const indexOf7 = (value )=> {
+  if (value==7) {
+    console.log(value);
+  }
+}
+indexOf7(arr)
 ///////////// TASK 12//////////////
 let arr2 = [
   {
@@ -565,6 +663,24 @@ console.log(sumOnlyT);
 //    }
 //})
 //console.log(arr2);
+//for (let index = 0; index < arr2.length; index++) {
+//  let element = arr2[index].name;
+//  if (element.endsWith('e')) {
+//    arr2[index].name = "SuperDev";
+//  }
+//}
+//console.log(arr2);
+
+//__ArrowFunction__\\
+const endArr2 = (arr) => {
+  arr.forEach(value => {
+    if (value.name.endsWith("e")) {
+      value.name = 'SuperDev';
+    }
+  },
+console.log(arr));
+}
+endArr2(arr2)
 // 20 arr2 de "name"-i en uzun olan obyektin key-i ni tapin
 //let object=arr2[0]
 //for (let index = 0; index < arr2.length; index++) {
@@ -621,6 +737,17 @@ console.log(length4);
 //}
 //console.log(object.name)
 
+//___withArrowFunction___\\
+const nameOfTheBiggestKey= (array)=>{
+  let object=array[0]
+for (let index = 0; index < array.length; index++) {
+    let currentObject = array[index]
+    if(object.key< currentObject.key){
+        object = currentObject
+    }
+}console.log(object.name);
+}
+nameOfTheBiggestKey(arr2)
 // 24 arr2 de terkibinde 2 'L' herfi olan obyekt(ler)in index(ler)ini tapin.
 //let indices = [];//with forEach
 //
