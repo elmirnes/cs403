@@ -1,5 +1,3 @@
-
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./../../classroom/HTML2/styles.css">
-
 </head>
 <body>
-    <form>
+    <form id="user-form">
         <h1>Sign In</h1>
         <input id="username" type="text" placeholder="add username..." required/>
         <input id="email" type="email" placeholder="email..." required/>
@@ -18,8 +15,13 @@
         <input id="confirmpassword" type="password" placeholder="confirm password..." required/>
         <input id="checkbox" type="checkbox" />
         <button disabled id="btn">Submit</button>
-        <input type="image" src="https://i0.wp.com/mashallahnews.com/wp-content/uploads/2012/01/recepsporda.jpg?resize=462%2C307" alt=""/>
     </form>
+
+    <div id="user-list">
+        <h2>User List</h2>
+        <ul id="users"></ul>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>
