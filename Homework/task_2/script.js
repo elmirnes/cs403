@@ -163,7 +163,7 @@
 const arr3 = ["9", 10, 100, 11, 'true', 'undefined', true, null, 'something', false]
 
 //1.Show only numbers
-//console.log(arr3.filter((num)=>typeof num==="number"));//I put === here because it only asks us for number values.
+console.log(arr3.filter((num)=>typeof num==="number"));//I put === here because it only asks us for number values.
 
 //___SecondSolution___\\
 
@@ -362,9 +362,9 @@ countOfBoolen(arr4)
 //console.log(obj.info.loc.city);
 ////////////// TASK 11 //////////////
 
-// let fullName = 'Ulfat Zakirli Rovshen'
+ let fullName = 'Ulfat Zakirli Rovshen'
 //1) Ad soyad ata adinizi butov sheklde goturun ve array sheklinde herflerine ayirin(split)
-// console.log(fullName.split(""));
+ console.log(fullName.split(""));
 //2) FullName'də soyadinizi adinizin onune keciren alqoritm yazin
 //
 //fullName=fullName.split(" ")
@@ -376,6 +376,7 @@ countOfBoolen(arr4)
 //
 //replacedFullName=[fullName[1],fullName[0],fullName[2]]//next questions want array to me that is why i create this
 //console.log(replacedFullName);
+
 //3) Alinan yeni arrayi stringe cevirin(join)
 //console.log(replacedFullName.join());
 
